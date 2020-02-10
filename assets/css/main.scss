@@ -17,7 +17,10 @@
  * Date - 9/5/18
  * Designed by Michael Owens / Dragon Info Tech
  */
-
+.foo1{
+  padding-top: 580px;
+  position: relative;
+}
 //HERO
 .hero{
   position: relative;
@@ -27,16 +30,19 @@
   &--background-image{
     background: url("{{site.url}}/assets/img/1076-1920x1080.jpg") center center no-repeat;
     background-size:cover;
-    height: calc(100vh - 50px);
+    //height: calc(100vh - 50px);
+    height:600px;
     width:100%;
   }
 
   &__content{
-    margin-top: 175px;
+    //margin-top: 175px;
+    top:50%;
+
 
     &__header{
-      margin-top: -175px !important;
-      position: absolute;
+      //margin-top: -175px !important;
+      //position: absolute;
     }
   }
 
@@ -127,6 +133,11 @@
 }
 
 //WORK IS PERSONAL
+#work  {
+  margin:0px 0 0 0 !important;
+
+}
+
 .work{
   position: relative;
   height:100%;
@@ -144,8 +155,7 @@
 }
 
 .samples{
-
-  //top:-20px;
+  top:-175px;
   position: relative;
   //overflow: hidden;
   //z-index: -100;
@@ -153,6 +163,7 @@
   &__content{
     text-align: center;
     border-radius: 50%;
+    padding:75px;
   }
 
   .bg-sample-colour{
@@ -161,13 +172,13 @@
 
   a{
     color: #fff;
+    font-size: rem-calc(14);
   }
-}
 
-#decision-maker{
-  margin-bottom: 0;
+
 
 }
+
 //DECISION MAKER
   .decision-maker{
     position: relative;

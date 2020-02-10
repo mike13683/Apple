@@ -17,43 +17,54 @@ $(document).ready(function(){
     })
 
 
-//     var heroController = new ScrollMagic.Controller()
-//
-//     var heroScene = new ScrollMagic.Scene({
-//         triggerElement: ".hero__content-js",
-//         // duration: "100",
-//         triggerHook: 0.3
-//     })
-//
-//         // .setPin(".hero__content-js")
-//         .setTween(gsap.fromTo(".hero__content-j, {top:0}, {top:100}"))
-//         .addIndicators({
-//             name: "pin hero"
-//         })
-//         .addTo(heroController)
+    var heroController = new ScrollMagic.Controller()
+
+    var heroScene = new ScrollMagic.Scene({
+        triggerElement: ".hero__content img",
+        duration: "80%",
+        triggerHook: 0.3
+    })
+
+        .setPin(".hero__content")
+        // .setTween(gsap.fromTo(".hero__content-j, {top:0}, {top:100}"))
+
+        .addTo(heroController)
 
 
-    // var sampleController = new ScrollMagic.Controller();
-    //
-    // var tlSample = gsap.timeline();
-    // tlSample.fromTo(".samples", {autoAlpha:0, y:-125}, {autoAlpha:1, y:0, duration: 0.5})
-    // tlSample.fromTo(".samples", { autoAlpha:1}, {autoAlpha:0})
-    //
-    //
-    //
-    // var sampleScene = new ScrollMagic.Scene({
-    //     triggerElement: ".samples",
-    //     duration: "350",
-    //     triggerHook:0.7
-    // })
-    //
-    //     .setTween(tlSample)
-    //     .setPin(".samples")
-    //     .addIndicators({
-    //         name: "sample"
-    //     })
-    //     .addTo(sampleController)
-//
+
+    var controller = new ScrollMagic.Controller()
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: ".hero",
+        triggerHook: "0.5",
+        offset: "540"
+    })
+
+        .setTween(gsap.to(".hero__content-colour-change p, h1", {color:"#343A40"}))
+
+        .addTo(controller)
+
+
+    var sampleController = new ScrollMagic.Controller();
+
+    var tlSample = gsap.timeline();
+    // tlSample.fromTo(".samples", {autoAlpha:0, y:-50}, {autoAlpha:1, y:0 , duration:5})
+    // tlSample.fromTo(".samples", { autoAlpha:1}, {autoAlpha:0, duration:1})
+
+
+
+    var sampleScene = new ScrollMagic.Scene({
+        triggerElement: ".foo",
+        // duration: "60%",
+        // triggerHook:0.7
+    })
+
+        .setClassToggle(".foo", ".foo-fade")
+        // .setTween(tlSample)
+        // .setPin(".samples")
+
+        .addTo(sampleController)
+
 });
 
 
