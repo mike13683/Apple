@@ -1,6 +1,6 @@
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
-    $(".owl-carousel").owlCarousel({
+    jQuery(".owl-carousel").owlCarousel({
         dotsContainer: ".carousel-buttons",
         loop: true,
         margin: 10,
