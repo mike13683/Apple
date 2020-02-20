@@ -1,20 +1,26 @@
 jQuery(document).ready(function(){
 
-    jQuery(".owl-carousel").owlCarousel({
-        dotsContainer: ".carousel-buttons",
-        loop: true,
-        margin: 10,
-        // navText: ["",">"],
-        autoplay: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
+    jQuery(function($){
+
+        $(".owl-carousel").owlCarousel({
+            dotsContainer: ".carousel-buttons",
+            loop: true,
+            margin: 10,
+            // navText: ["",">"],
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                }
             }
-        }
-    })
+        })
+
+
+    }
+
 
 
     var heroController = new ScrollMagic.Controller()
